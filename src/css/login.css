@@ -1,0 +1,168 @@
+body{
+	font-family: cursive;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: coral;
+}
+
+.form-container{
+	background-color: white;
+	width: 80%;
+	border-radius: 10px;
+	overflow: hidden;
+
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+.form-container .login-container{
+	width: 500px;
+	margin: 0 auto;
+}
+
+.form-container .login-container> h2{
+	text-align: center;
+	font-size: 2.5rem;
+}
+.form-container .login-container> p,
+.form-container .login-container> span{
+	text-align: center;
+	color: #555;
+}
+
+.form-container .login-container> label{
+	display: block;
+	font-weight: bold;
+	padding: 5px 0;
+
+}
+
+.form-container .login-container input.input{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;	/*el input se adecua solo 
+	a lo ancho de su contenedor 
+	sin salir se*/
+
+	padding: 10px;
+	border: solid 1px #ccc;
+	border-radius: 10px;
+}
+
+.form-container .login-container input.input:focus{
+	outline: solid 2px rgb(0, 153, 255);
+}
+
+.form-container .login-container .options{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.form-container .login-container .options a{
+	color: blue;
+	text-decoration: none;
+
+}
+
+.form-container .login-container a:hover{
+	text-decoration: underline;
+	color: red;
+}
+
+.btn{
+	border: none;
+	padding: 15px 0;
+	width: 100%;
+	font-weight: bold;
+	display: block;
+	cursor: pointer;
+	border-radius: 5px;
+	text-transform: uppercase;
+}
+
+.btn.btn-login{
+	background-color: black;
+	color: white;
+}
+.btn.btn-login:hover{
+	background-color: #444;
+}
+
+.btn.btn-facebook{
+	background-color: rgb(10, 82, 216);
+	color: white;
+}
+.btn.btn-facebook:hover{
+	background-color: rgb(8, 69, 182);
+}
+
+.btn.btn-google{
+	background-color: white;
+	color: black;
+	border: solid 1px #ccc;
+}
+.btn.btn-google:hover{
+	background-color: gray;
+}
+
+.btn.btn-twitter{
+	background-color: rgb(10, 168, 216);
+	color: white;
+}
+.btn.btn-twitter:hover{
+	background-color: rgb(8, 137, 177);
+} 
+
+.form-container .login-container .providers{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	text-align: center;
+	margin-top: 30px;
+} 
+
+.form-container .welcome-screen-container{
+	background-color: black;
+	background-image: url('../assets/06.jpg');
+	background-position: cover;
+	background-repeat: cover;
+	background-size: cover;
+	height: 100%;
+	width: 50%;
+	color: white;
+}
+
+@media screen and (max-width: 1357px){
+	.form-container{
+		width: 95%;
+	}
+
+	.form-container .login-container{
+		width: 400px;
+		margin: 0 auto;
+	}
+
+	.form-container .welcome-screen-container{
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.form-container .welcome-screen-container{
+		display: none;
+	}
+	.form-container .login-container{
+		width: 70vh;
+		height: 110vh;
+	}
+	.form-container{
+		height: 130vh;
+	}
+
+}
+
